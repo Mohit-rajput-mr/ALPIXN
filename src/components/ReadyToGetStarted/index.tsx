@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FaChevronRight } from 'react-icons/fa';
 import styles from './ReadyToGetStarted.module.css';
 
@@ -26,7 +26,7 @@ const ReadyToGetStarted = () => {
     { id: 'outsourcing', label: 'Software Development Outsourcing: Aspects to Consider' },
   ];
 
-  const guideContent: Record<string, JSX.Element> = {
+  const guideContent: Record<string, React.ReactNode> = {
     types: (
       <>
         <h3 className={styles.guideContentTitle}>Types of Software</h3>
