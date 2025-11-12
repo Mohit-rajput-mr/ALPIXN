@@ -1,12 +1,12 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FaChevronDown } from 'react-icons/fa';
 import styles from './Footer.module.css';
 
 interface FAQItem {
   question: string;
-  answer: JSX.Element;
+  answer: React.ReactNode;
 }
 
 const Footer = () => {
