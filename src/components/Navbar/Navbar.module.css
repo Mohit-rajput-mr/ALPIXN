@@ -1,0 +1,274 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7rem 3rem;
+  background-color: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logoLink {
+  text-decoration: none;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.logoIconLink,
+.logoTextLink {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.logoIcon {
+  width: 38px;
+  height: 38px;
+  background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+}
+
+.logoA {
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.logoTextContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.logoText {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #061325;
+  letter-spacing: 1px;
+}
+
+.logoTagline {
+  font-size: 0.65rem;
+  color: #666;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.builtBy {
+  color: #888;
+  font-size: 0.65rem;
+}
+
+.mohitLink {
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: visible;
+}
+
+.mohit {
+  color: #e74c3c;
+  font-weight: 900;
+  font-size: 1rem;
+  animation: mohitFunky 3s ease-in-out infinite, gradientShift 4s ease infinite;
+  display: inline-block;
+  letter-spacing: 1px;
+  background: linear-gradient(45deg, #e74c3c, #ff6b6b, #e74c3c, #ff6b6b);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  transition: all 0.5s ease;
+}
+
+.mohit::before {
+  content: '✨';
+  position: absolute;
+  left: -18px;
+  top: -2px;
+  font-size: 0.7rem;
+  animation: sparkle 2s ease-in-out infinite;
+}
+
+.mohit::after {
+  content: '✨';
+  position: absolute;
+  right: -18px;
+  top: -2px;
+  font-size: 0.7rem;
+  animation: sparkle 2s ease-in-out infinite 1s;
+}
+
+.mohitLink:hover .mohit {
+  transform: scale(3) rotate(360deg);
+  filter: brightness(1.3) saturate(1.4);
+  transition: all 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.mohitLink:active .mohit {
+  transform: scale(1.3) rotate(-5deg);
+}
+
+@keyframes mohitFunky {
+  0%, 100% {
+    transform: translateY(0) scale(1) rotate(0deg);
+  }
+  15% {
+    transform: translateY(-5px) scale(1.1) rotate(3deg);
+  }
+  30% {
+    transform: translateY(0) scale(1) rotate(0deg);
+  }
+  45% {
+    transform: translateY(-5px) scale(1.1) rotate(-3deg);
+  }
+  60% {
+    transform: translateY(0) scale(1) rotate(0deg);
+  }
+  75% {
+    transform: translateY(-3px) scale(1.05) rotate(2deg);
+  }
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes sparkle {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(0.8) rotate(0deg);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2) rotate(180deg);
+  }
+}
+
+.navLinks {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.navLink {
+  color: #061325;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  text-decoration: none;
+}
+
+.navLink:hover {
+  color: #3498db;
+}
+
+.chevron {
+  font-size: 0.7rem;
+  transition: transform 0.3s ease;
+}
+
+.chevronOpen {
+  transform: rotate(180deg);
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdownContent {
+  display: block;
+  position: absolute;
+  background-color: #ffffff;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 5px;
+  overflow: hidden;
+  animation: fadeIn 0.3s ease;
+  top: 100%;
+  margin-top: 0.5rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dropdownContent a {
+  color: #061325;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+.dropdownContent a:hover {
+  background-color: #f1f1f1;
+  color: #3498db;
+}
+
+.contactBtn {
+  background-color: #3498db;
+  color: white;
+  padding: 0.6rem 1.6rem;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.contactBtn:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+}
+
+
+@media (max-width: 1024px) {
+  .navLinks {
+    display: none;
+  }
+  
+  .nav {
+    padding: 0.7rem 2rem;
+  }
+}

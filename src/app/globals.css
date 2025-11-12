@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+:root {
+  --background: #061325;
+  --foreground: #ffffff;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Global Star Animation */
+@keyframes starBurst {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0) rotate(0deg);
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(
+      calc(-50% + var(--offset-x, 0px)), 
+      calc(-50% + var(--offset-y, 0px))
+    ) scale(1.8) rotate(720deg);
+  }
+}
+
+.mohit-star {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  font-size: inherit;
+  color: #000000;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+}
