@@ -244,13 +244,20 @@
 }
 
 @media (max-width: 768px) {
+  .caseStudiesContainer {
+    padding: 4rem 1.5rem;
+  }
+
   .tabs {
     justify-content: center;
+    gap: 0.75rem;
   }
 
   .tab {
     margin-bottom: 0.5rem;
-    min-width: 150px;
+    min-width: 140px;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
   }
 
   .features {
@@ -265,10 +272,24 @@
   .btn {
     text-align: center;
     width: 100%;
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
   }
 
   .caseStudiesTitle {
     font-size: 2rem;
+  }
+
+  .caseStudiesSubtitle {
+    font-size: 1rem;
+  }
+
+  .caseTitle {
+    font-size: 1.6rem;
+  }
+
+  .caseDescription {
+    font-size: 0.95rem;
   }
   
   .caseImage {
@@ -277,5 +298,37 @@
   
   .tabsContainer {
     padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .caseStudiesContainer {
+    padding: 3rem 1rem;
+  }
+
+  .caseStudiesTitle {
+    font-size: 1.75rem;
+  }
+
+  .caseStudiesSubtitle {
+    font-size: 0.95rem;
+  }
+
+  .caseTitle {
+    font-size: 1.4rem;
+  }
+
+  .tab {
+    min-width: 120px;
+    padding: 0.65rem 1.2rem;
+    font-size: 0.85rem;
+  }
+
+  .tabsContainer {
+    padding: 1rem;
+  }
+
+  .caseImage {
+    height: 250px;
   }
 }

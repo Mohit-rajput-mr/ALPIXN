@@ -369,15 +369,74 @@
 }
 
 @media (max-width: 768px) {
-  .titleSection h1 {
-    font-size: 2.2rem;
-  }
-
   .container {
     padding: 4rem 1.5rem;
   }
+
+  .titleSection h1 {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .ctaButton {
+    padding: 0.85rem 1.75rem;
+    font-size: 0.95rem;
+  }
   
+  .benefitItem {
+    padding: 1.5rem;
+    min-height: 140px;
+  }
+
+  .benefitHeader {
+    gap: 0.75rem;
+  }
+
+  .benefitNumber {
+    font-size: 1.3rem;
+    min-width: 35px;
+  }
+
+  .benefitTitle {
+    font-size: 1.15rem;
+  }
+
   .benefitDescription {
     padding-left: 0;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 3rem 1rem;
+  }
+
+  .titleSection h1 {
+    font-size: 1.75rem;
+  }
+
+  .subtitle {
+    font-size: 0.95rem;
+  }
+
+  .benefitItem {
+    padding: 1.25rem;
+    min-height: 120px;
+  }
+
+  .benefitNumber {
+    font-size: 1.2rem;
+  }
+
+  .benefitTitle {
+    font-size: 1.05rem;
+  }
+
+  .benefitDescription {
+    font-size: 0.9rem;
   }
 }

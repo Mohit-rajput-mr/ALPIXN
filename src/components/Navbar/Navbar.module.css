@@ -262,13 +262,189 @@
   box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
 }
 
+/* Hamburger Menu Button */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #061325;
+  cursor: pointer;
+  z-index: 1001;
+  transition: color 0.3s ease;
+}
 
+.hamburger:hover {
+  color: #3498db;
+}
+
+/* Mobile Responsive Styles */
 @media (max-width: 1024px) {
-  .navLinks {
+  .nav {
+    padding: 0.7rem 1.5rem;
+    position: relative;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  /* Make logo smaller on mobile */
+  .logoIcon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .logoA {
+    font-size: 1.1rem;
+  }
+
+  .logoText {
+    font-size: 1.1rem;
+  }
+
+  .logoTagline {
+    font-size: 0.55rem;
+  }
+
+  .mohit {
+    font-size: 0.85rem;
+  }
+
+  .logo {
+    gap: 0.5rem;
+  }
+
+  /* Hide contact button on desktop in mobile view */
+  .contactBtn {
     display: none;
   }
-  
+
+  /* Navigation Links - Mobile Menu */
+  .navLinks {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+    flex-direction: column;
+    gap: 0;
+    padding: 1rem 0;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    z-index: 999;
+  }
+
+  .navLinksOpen {
+    max-height: calc(100vh - 60px);
+    opacity: 1;
+    overflow-y: auto;
+  }
+
+  .navLink {
+    padding: 1rem 1.5rem;
+    width: 100%;
+    text-align: left;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 1rem;
+  }
+
+  .dropdown {
+    width: 100%;
+  }
+
+  .dropdown .navLink {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .dropdownContent {
+    position: static;
+    box-shadow: none;
+    background-color: #f8f8f8;
+    margin: 0;
+    border-radius: 0;
+  }
+
+  .dropdownContent a {
+    padding-left: 2.5rem;
+    font-size: 0.95rem;
+  }
+
+  /* Show Contact Button in Mobile Menu */
+  .contactBtnMobile {
+    display: block;
+    margin: 1rem 1.5rem;
+    text-align: center;
+    width: calc(100% - 3rem);
+  }
+}
+
+@media (max-width: 768px) {
   .nav {
-    padding: 0.7rem 2rem;
+    padding: 0.6rem 1rem;
+  }
+
+  /* Even smaller logo on small mobile */
+  .logoIcon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .logoA {
+    font-size: 1rem;
+  }
+
+  .logoText {
+    font-size: 1rem;
+  }
+
+  .logoTagline {
+    font-size: 0.5rem;
+  }
+
+  .mohit {
+    font-size: 0.75rem;
+  }
+
+  .mohit::before,
+  .mohit::after {
+    font-size: 0.6rem;
+    left: -15px;
+    right: -15px;
+  }
+
+  .hamburger {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .logoIcon {
+    width: 26px;
+    height: 26px;
+  }
+
+  .logoA {
+    font-size: 0.9rem;
+  }
+
+  .logoText {
+    font-size: 0.95rem;
+  }
+
+  .logoTagline {
+    font-size: 0.45rem;
+  }
+
+  .builtBy {
+    font-size: 0.45rem;
+  }
+
+  .mohit {
+    font-size: 0.7rem;
   }
 }

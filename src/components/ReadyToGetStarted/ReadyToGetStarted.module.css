@@ -257,6 +257,7 @@
 @media (max-width: 992px) {
   .modelsGrid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
   }
 
   .guideContainer {
@@ -283,20 +284,131 @@
 }
 
 @media (max-width: 768px) {
-  .sectionTitle {
-    font-size: 2.2rem;
-  }
-
-  .modelsGrid {
-    grid-template-columns: 1fr;
-  }
-
   .container {
     padding: 3rem 1.5rem;
   }
 
-  .ctaTitle {
+  .sectionTitle {
     font-size: 2rem;
+  }
+
+  .sectionSubtitle {
+    font-size: 1rem;
+  }
+
+  .modelsGrid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .modelCard {
+    padding: 1.75rem;
+  }
+
+  .modelTitle {
+    font-size: 1.35rem;
+  }
+
+  .modelDescription {
+    font-size: 0.95rem;
+  }
+
+  .featureItem {
+    font-size: 0.95rem;
+  }
+
+  .ctaSection {
+    padding: 3rem 1.5rem;
+  }
+
+  .ctaTitle {
+    font-size: 1.85rem;
+  }
+
+  .ctaSubtitle {
+    font-size: 1rem;
+  }
+
+  .ctaBtn {
+    padding: 0.9rem 1.75rem;
+    font-size: 1rem;
+  }
+
+  .guideContent {
+    padding: 1.5rem;
+  }
+
+  .guideContentTitle {
+    font-size: 1.25rem;
+  }
+
+  .guideContentText {
+    font-size: 0.95rem;
+  }
+
+  .guideTab {
+    font-size: 1rem;
+    padding: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 2.5rem 1rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.75rem;
+  }
+
+  .sectionSubtitle {
+    font-size: 0.95rem;
+  }
+
+  .ctaSection {
+    padding: 2.5rem 1.25rem;
+  }
+
+  .ctaTitle {
+    font-size: 1.65rem;
+  }
+
+  .ctaSubtitle {
+    font-size: 0.95rem;
+  }
+
+  .ctaBtn {
+    padding: 0.85rem 1.5rem;
+    font-size: 0.95rem;
+  }
+
+  .modelCard {
+    padding: 1.5rem;
+  }
+
+  .modelTitle {
+    font-size: 1.25rem;
+  }
+
+  .modelDescription {
+    font-size: 0.9rem;
+  }
+
+  .guideTab {
+    font-size: 0.95rem;
+    padding: 0.8rem;
+  }
+
+  .guideContent {
+    padding: 1.25rem;
+  }
+
+  .guideContentTitle {
+    font-size: 1.15rem;
+  }
+
+  .guideContentText {
+    font-size: 0.9rem;
   }
 }
 

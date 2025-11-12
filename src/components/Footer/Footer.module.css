@@ -351,13 +351,47 @@
 }
 
 @media (max-width: 768px) {
-  .footerContent {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 3rem;
+  .container {
+    padding: 3rem 1.5rem;
+  }
+
+  .faqSection {
+    padding: 3rem 0;
   }
 
   .faqTitle {
-    font-size: 2.2rem;
+    font-size: 2rem;
+  }
+
+  .faqQuestion {
+    font-size: 1.1rem;
+    padding: 1.25rem 0;
+  }
+
+  .faqIcon {
+    font-size: 1.3rem;
+  }
+
+  .faqAnswer {
+    font-size: 0.95rem;
+  }
+
+  .footerContent {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+    padding: 0 1.5rem;
+  }
+
+  .footerTitle {
+    font-size: 1.1rem;
+  }
+
+  .footerLink {
+    font-size: 0.95rem;
+  }
+
+  .newsletterTitle {
+    font-size: 1.75rem;
   }
 
   .newsletterForm {
@@ -367,28 +401,148 @@
 
   .newsletterInput {
     border-radius: 4px;
+    padding: 0.9rem 1.25rem;
+    font-size: 0.95rem;
   }
 
   .newsletterBtn {
     border-radius: 4px;
-    padding: 0.8rem;
+    padding: 0.9rem;
+    font-size: 0.95rem;
   }
 
   .locations {
     justify-content: center;
+    padding: 0 1.5rem;
+  }
+
+  .location {
+    font-size: 0.95rem;
+  }
+
+  .socialBar {
+    padding: 2rem 1.5rem 0;
+  }
+
+  .copyright {
+    font-size: 0.85rem;
+  }
+
+  .footerBottom {
+    padding: 0 1.5rem;
+  }
+
+  .footerBottomLink {
+    font-size: 0.85rem;
+  }
+
+  .developedBy {
+    font-size: 0.95rem;
+    padding: 1.5rem 1.5rem 0.75rem;
+  }
+
+  .heart {
+    font-size: 1.1rem;
+  }
+
+  .developer {
+    font-size: 1rem;
   }
 }
 
 @media (max-width: 576px) {
+  .container {
+    padding: 2.5rem 1rem;
+  }
+
+  .faqSection {
+    padding: 2.5rem 0;
+  }
+
+  .faqTitle {
+    font-size: 1.75rem;
+  }
+
+  .faqQuestion {
+    font-size: 1rem;
+    padding: 1rem 0;
+  }
+
+  .faqIcon {
+    font-size: 1.2rem;
+  }
+
+  .faqAnswer {
+    font-size: 0.9rem;
+  }
+
   .footerContent {
     grid-template-columns: 1fr;
     gap: 2rem;
+    padding: 0 1rem;
+  }
+
+  .footerTitle {
+    font-size: 1.05rem;
+  }
+
+  .footerLink {
+    font-size: 0.9rem;
+  }
+
+  .newsletterTitle {
+    font-size: 1.5rem;
+  }
+
+  .locations {
+    padding: 0 1rem;
+    gap: 1rem;
+  }
+
+  .location {
+    font-size: 0.9rem;
+  }
+
+  .locationFlag {
+    width: 20px;
+    height: 20px;
+  }
+
+  .socialBar {
+    padding: 1.5rem 1rem 0;
+  }
+
+  .socialLink {
+    width: 32px;
+    height: 32px;
+  }
+
+  .copyright {
+    font-size: 0.8rem;
   }
 
   .footerBottom {
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
+    gap: 0.75rem;
+    padding: 0 1rem;
+  }
+
+  .footerBottomLink {
+    font-size: 0.8rem;
+  }
+
+  .developedBy {
+    font-size: 0.9rem;
+    padding: 1.25rem 1rem 0.5rem;
+  }
+
+  .heart {
+    font-size: 1rem;
+  }
+
+  .developer {
+    font-size: 0.95rem;
   }
 }
 

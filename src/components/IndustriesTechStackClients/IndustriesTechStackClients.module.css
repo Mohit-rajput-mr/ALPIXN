@@ -322,6 +322,7 @@
 @media (max-width: 992px) {
   .industriesGrid {
     grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
   }
 
   .testimonialsGrid {
@@ -330,38 +331,175 @@
   
   .techGrid {
     grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
   }
 }
 
 @media (max-width: 768px) {
+  .container {
+    padding: 4rem 1.5rem;
+  }
+
   .sectionTitle {
-    font-size: 2.2rem;
+    font-size: 2rem;
+  }
+
+  .sectionSubtitle {
+    font-size: 1rem;
   }
 
   .industriesGrid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .industryItem {
+    padding: 2rem 1.5rem;
+  }
+
+  .industryIcon {
+    width: 60px;
+    height: 60px;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .industryName {
+    font-size: 1.05rem;
   }
 
   .techTabs {
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 0.75rem;
+  }
+
+  .techTab {
+    font-size: 1rem;
+    padding: 0.65rem 1.5rem;
   }
 
   .techGrid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
   }
 
-  .container {
-    padding: 4rem 1.5rem;
+  .techItem {
+    padding: 1.5rem 1.25rem;
+    min-height: 140px;
+  }
+
+  .techIconWrapper {
+    width: 60px;
+    height: 60px;
+    font-size: 2rem;
+  }
+
+  .techName {
+    font-size: 0.95rem;
+  }
+
+  .testimonialCard {
+    padding: 2rem;
+  }
+
+  .quoteIcon {
+    font-size: 3rem;
+  }
+
+  .testimonialContent {
+    font-size: 1rem;
+  }
+
+  .authorName {
+    font-size: 1rem;
+  }
+
+  .authorTitle {
+    font-size: 0.9rem;
   }
 }
 
 @media (max-width: 480px) {
-  .techGrid {
-    grid-template-columns: repeat(2, 1fr);
+  .container {
+    padding: 3rem 1rem;
   }
-  
+
+  .sectionTitle {
+    font-size: 1.75rem;
+  }
+
+  .sectionSubtitle {
+    font-size: 0.95rem;
+  }
+
   .industriesGrid {
     grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .industryItem {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .industryIcon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.75rem;
+  }
+
+  .industryName {
+    font-size: 1rem;
+  }
+
+  .techGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .techItem {
+    padding: 1.25rem 1rem;
+    min-height: 120px;
+    max-width: none;
+  }
+
+  .techIconWrapper {
+    width: 50px;
+    height: 50px;
+    font-size: 1.75rem;
+  }
+
+  .techName {
+    font-size: 0.9rem;
+  }
+
+  .techTab {
+    font-size: 0.95rem;
+    padding: 0.6rem 1.25rem;
+  }
+
+  .testimonialCard {
+    padding: 1.75rem;
+  }
+
+  .quoteIcon {
+    font-size: 2.5rem;
+  }
+
+  .testimonialContent {
+    font-size: 0.95rem;
+    padding-top: 1.5rem;
+  }
+
+  .authorAvatar {
+    width: 50px;
+    height: 50px;
+  }
+
+  .authorName {
+    font-size: 0.95rem;
+  }
+
+  .authorTitle {
+    font-size: 0.85rem;
   }
 }

@@ -1,15 +1,21 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
-import { FaChevronDown } from 'react-icons/fa';
+import { FaChevronDown, FaBars, FaTimes } from 'react-icons/fa';
 import styles from './Navbar.module.css';
 
 const Navbar = () => {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   const toggleDropdown = (menu: string) => {
     setOpenDropdown(openDropdown === menu ? null : menu);
+  };
+
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!mobileMenuOpen);
+    setOpenDropdown(null);
   };
 
   // Close dropdown when clicking outside
@@ -29,6 +35,7 @@ const Navbar = () => {
   // Close dropdown when clicking on a link
   const handleLinkClick = () => {
     setOpenDropdown(null);
+    setMobileMenuOpen(false);
   };
 
   return (
@@ -103,8 +110,13 @@ const Navbar = () => {
           </div>
         </div>
       </div>
+
+      {/* Hamburger Menu Button */}
+      <button className={styles.hamburger} onClick={toggleMobileMenu} aria-label="Toggle menu">
+        {mobileMenuOpen ? <FaTimes /> : <FaBars />}
+      </button>
       
-      <div className={styles.navLinks}>
+      <div className={`${styles.navLinks} ${mobileMenuOpen ? styles.navLinksOpen : ''}`}>
         <a href="#" className={styles.navLink} onClick={handleLinkClick}>Home</a>
         <a href="#" className={styles.navLink} onClick={handleLinkClick}>About</a>
         
@@ -175,7 +187,7 @@ const Navbar = () => {
         </div>
       </div>
       
-      <a href="#" className={styles.contactBtn}>Contact Us</a>
+      <a href="#" className={`${styles.contactBtn} ${mobileMenuOpen ? styles.contactBtnMobile : ''}`} onClick={handleLinkClick}>Contact Us</a>
     </nav>
   );
 };
